@@ -1,0 +1,35 @@
+# Project: w2
+# Makefile created by Red Panda C++ 2.26.2249
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = w2_private.res
+OBJ      = main.o $(RES)
+LINKOBJ  = main.o w2_private.res
+CLEANOBJ  =  main.o  w2_private.res w2.exe
+LIBS     = 
+INCS     =  
+CXXINCS  =  
+BIN      = w2.exe
+CXXFLAGS = $(CXXINCS)  -g3 -pipe -Wall -D__DEBUG__
+CFLAGS   = $(INCS)  -g3 -pipe -Wall -D__DEBUG__
+RM       = del /q /f
+WINDRESFLAGS  = 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	-$(RM) $(CLEANOBJ) > NUL 2>&1
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS) 
+
+w2_private.res: w2_private.rc 
+	$(WINDRES) -i w2_private.rc --input-format=rc -o w2_private.res -O coff $(WINDRESFLAGS) 
+
