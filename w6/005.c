@@ -34,7 +34,7 @@ void print_link(s_data *head) { //雙向
 		ptr = ptr->llink;
 	} while (ptr != NULL);
 }
-void print_DDlink(node_emp *head) { //雙向
+void print_forwardAndBacklink(node_emp *head) { //雙向
 	node_emp *ptr = head, *pre;
 	printf("向右\n");
 	do {
@@ -103,10 +103,21 @@ link1 concatlist(link1 ptr1,link1 ptr2) {
 	while(ptr->rlink!=NULL)
 		ptr=ptr->rlink;
 	ptr->rlink=ptr2;
-
-	
 	return ptr1;
+
 }
+link1 combineTwoDList(link1 ptr1, link1 ptr2) {
+    link1 ptr = ptr1;
+    while(ptr->rlink != NULL)
+        ptr = ptr->rlink;
+    ptr->rlink = ptr2;
+    if(ptr2 != NULL)
+    {
+        ptr2->llink = ptr;
+    }
+    return ptr1;
+}
+
 
 int main() {
 	link1 head1, ptr1,newnode1, left;
@@ -166,20 +177,112 @@ int main() {
 	}
 
 	i=0;
-	ptr1=concatlist(head1, head2); //#50
-		link1  start=ptr1;
+	ptr1=combineTwoDList(head1, head2); //combine two double linked list
+	link1 list_ptr=ptr1;
 	printf("result : \n");
 	while (ptr1!=NULL) { //
-		if (ptr1->rlink != NULL) printf("[%2d %6s %3d] -> ",ptr1->num,ptr1->name,ptr1->sal);
+		if (ptr1->rlink != NULL) printf("[%2d %6s %3d] <-> ",ptr1->num,ptr1->name,ptr1->sal);
 		else printf("[%2d %6s %3d]\n",ptr1->num,ptr1->name,ptr1->sal);
 		i++;
 		if(i>=3) { printf("\n"); i=0; } //every 3 
-		ptr1=ptr1->rlink;
+		 ptr1=ptr1->rlink;
 	}
 	printf("\n");
-	print_DDlink(ptr1);
+	printf("two way printing\n");	//雙向print
+	print_forwardAndBacklink(list_ptr);
 }
 /*
 
+         emNo   name       sal
+        ==============================
+        [1001]  [ Allen     ]   [32367]
+        [1002]  [ Scott     ]   [24388]
+        [1003]  [ Marry     ]   [27556]
+        [1007]  [ John      ]   [31299]
+        [1012]  [ Mark      ]   [42660]
+        [1014]  [ Ricky     ]   [25676]
+        [1018]  [ Lisa      ]   [44145]
+        [1043]  [ Jasica    ]   [52182]
+        [1031]  [ Hanson    ]   [32769]
+        [1037]  [ Amy       ]   [21100]
+        [1041]  [ Bob       ]   [32196]
+        [1046]  [ Jack      ]   [25776]
+
+        no name sal
+        ==============================
+        [13]    [ May       ]   [ 77]
+        [14]    [ John      ]   [ 52]
+        [15]    [ Michael   ]   [ 41]
+        [16]    [ Andy      ]   [ 75]
+        [17]    [ Tom       ]   [ 50]
+        [18]    [ Jane      ]   [ 68]
+        [19]    [ Yoko      ]   [ 68]
+        [20]    [ Axel      ]   [ 43]
+        [21]    [ Alex      ]   [ 71]
+        [22]    [ Judy      ]   [ 52]
+        [23]    [ Kelly     ]   [ 73]
+        [24]    [ Lucy      ]   [ 65]
+result : 
+[1001  Allen 32367] <-> [1002  Scott 24388] <-> [1003  Marry 27556] <-> 
+[1007   John 31299] <-> [1012   Mark 42660] <-> [1014  Ricky 25676] <-> 
+[1018   Lisa 44145] <-> [1043 Jasica 52182] <-> [1031 Hanson 32769] <-> 
+[1037    Amy 21100] <-> [1041    Bob 32196] <-> [1046   Jack 25776] <-> 
+[13    May  77] <-> [14   John  52] <-> [15 Michael  41] <-> 
+[16   Andy  75] <-> [17    Tom  50] <-> [18   Jane  68] <-> 
+[19   Yoko  68] <-> [20   Axel  43] <-> [21   Alex  71] <-> 
+[22   Judy  52] <-> [23  Kelly  73] <-> [24   Lucy  65]
+
+
+two way printing
+向右
+name Allen      sal:32367
+name Scott      sal:24388
+name Marry      sal:27556
+name John       sal:31299
+name Mark       sal:42660
+name Ricky      sal:25676
+name Lisa       sal:44145
+name Jasica     sal:52182
+name Hanson     sal:32769
+name Amy        sal:21100
+name Bob        sal:32196
+name Jack       sal:25776
+name May        sal:77
+name John       sal:52
+name Michael    sal:41
+name Andy       sal:75
+name Tom        sal:50
+name Jane       sal:68
+name Yoko       sal:68
+name Axel       sal:43
+name Alex       sal:71
+name Judy       sal:52
+name Kelly      sal:73
+name Lucy       sal:65
+向�
+name Lucy       sal:65
+name Kelly      sal:73
+name Judy       sal:52
+name Alex       sal:71
+name Axel       sal:43
+name Yoko       sal:68
+name Jane       sal:68
+name Tom        sal:50
+name Andy       sal:75
+name Michael    sal:41
+name John       sal:52
+name May        sal:77
+name Jack       sal:25776
+name Bob        sal:32196
+name Amy        sal:21100
+name Hanson     sal:32769
+name Jasica     sal:52182
+name Lisa       sal:44145
+name Ricky      sal:25676
+name Mark       sal:42660
+name John       sal:31299
+name Marry      sal:27556
+name Scott      sal:24388
+name Allen      sal:32367
 
 */
