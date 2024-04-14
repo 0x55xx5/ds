@@ -36,6 +36,7 @@ struct emp {
 	int num, sal;
 	char name[10];
 	struct emp *llink, *rlink;
+
 };
 typedef struct emp node_emp;
 typedef node_emp *link1;
@@ -48,6 +49,34 @@ link1 findnode(link1 head, int num) {
 	}
 	return NULL;
 }
+int getlen(link1 cir_h) {
+	int n = 0;
+	if (cir_h != NULL) {
+		link1 p = cir_h;
+		do {
+			n++;
+			p = p->rlink;
+			printf("total %d", n);
+		} while (p != cir_h);
+		return n;
+	}
+	
+
+}
+
+void print_emp(link1 h) {
+	link1 ptr1 = h;
+
+	do{
+		printf("---\t[%2d]\t[ %-10s]\t[%3d]\n", ptr1->num, ptr1->name, ptr1->sal);
+		ptr1 = ptr1->rlink;
+			
+	}while(ptr1 != h);
+		printf("-1--");
+	printf("%d",getlen(h));
+}
+
+
 link1 insert(link1 head1, link1 ptr1, int num, int sal, char name[10]) {
 	link1 newnode1 = (link1)malloc(sizeof(node_emp));
 	newnode1->llink = newnode1->rlink = NULL;
@@ -131,16 +160,20 @@ int main() {
 			newnode1->llink = left;
 			left = newnode1;
 		}
-
+		ptr1 = head1;
+		print_emp(head1);
 		printf("\n\t emNo   name\t   sal\n");
 		printf("\t==============================\n");
-		ptr1 = head1;
-
+		//ptr1 = head1;
+		/*
 		while (ptr1 != NULL) {
-			printf("\t[%2d]\t[ %-10s]\t[%3d]\n", ptr1->num, ptr1->name, ptr1->sal);
-			ptr1 = ptr1->rlink;
-		}
+				printf("-\t[%2d]\t[ %-10s]\t[%3d]\n", ptr1->num, ptr1->name, ptr1->sal);
+				ptr1 = ptr1->rlink;*/
 	}
+
+
+
+	
 
 	//CRUD
 
@@ -152,7 +185,7 @@ int main() {
 		else {
 			ptr1 = findnode(head1, pos);
 			if (ptr1 == NULL)
-				printf("not founded \!!");
+				printf("not founded");
 			else {
 				printf("insert  no:");
 				scanf("%d", &new_num);
@@ -181,7 +214,7 @@ int main() {
 		else {
 			ptr1 = findnode(head1, pos);
 
-			if (ptr1 == NULL) printf("not founded\!!");
+			if (ptr1 == NULL) printf("not founded");
 			else {
 				head1 = delete1(head1, ptr1);
 				printf("del %d employee name: %s sal:%d\n", ptr1->num, ptr1->name, ptr1->sal);

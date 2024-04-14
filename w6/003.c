@@ -29,6 +29,8 @@ void print_link(s_data *head) { //雙向
 		ptr = ptr->llink;
 	} while (ptr != NULL);
 }
+
+
 int main() {
 
 	int i = 0, sel;
