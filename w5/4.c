@@ -9,9 +9,6 @@ struct employee {
 };
 typedef struct employee node;
 typedef node *link;
-
-
-
 link findnode(link head, int num) {
 	link ptr;
 	ptr = head;
@@ -72,7 +69,6 @@ link concatlist (link ptr1, link ptr2) {
 	return ptr1;
 }
 
-/* run this program using the console pauser or add your own getch, system("pause") or input Loop */
 int main(int argc, char *argv[]) {
 	
 	
@@ -112,25 +108,26 @@ int main(int argc, char *argv[]) {
 		h = h->next;
 	}
 
-	///
+	/////反轉
 	
 	link p, q, x, r; x=head1; p=x; q=NULL; printf("reverse: \n");
 	while(p!=NULL) { 
 		r=q; q=p; p=p->next; q->next=r;
 	}
 	x=q;
+	
 	head1=ptr1=q; i=0;
 	while(ptr1!=NULL) {
 		if (ptr1->next != NULL) printf("[%2d %6s %3d] -> ",ptr1->num,ptr1->name,ptr1->salary);
 		else printf("[%2d_%6s_%3d]\n",ptr1->num,ptr1->name,ptr1->salary);
-		i++; if(i>=3) { printf("\n"); i=0; } //
+		i++; if(i>=3) { printf("\n"); i=0; } //3 UNIT GROUP
 		ptr1=ptr1->next;
 	///
 	}
 	return 0;
 }
 
-/*
+/*反轉單向串
 NUM    NAME   SALARY
 ============
 [1001]  [ Allen  ]      [ 32367]

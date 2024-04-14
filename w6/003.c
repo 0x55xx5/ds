@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-
-
+//雙向linked lsit
 
 struct stu {
 	char name[20], no[10];
@@ -19,7 +18,7 @@ void print_link(s_data *head) { //雙向
 	printf("向右\n");
 	do {
 		printf("name %s\tno:%s\t MATH:%d\t ENG :%d\n", ptr->name, ptr->no, ptr->Math, ptr->Eng);
-		pre = ptr;
+		pre = ptr;//反向查訪key
 		ptr = ptr->rlink;
 	} while (ptr != NULL);
 	printf("向左\n");

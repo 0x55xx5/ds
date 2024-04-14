@@ -12,8 +12,6 @@ struct student {
 typedef struct student s_data;
 s_data *ptr;/* 存取指標 */
 s_data *head;/* 串列開頭指標 */
-
-
 s_data *new1; /* 新增元素所在位置指標*/
 
 struct employee {
@@ -23,7 +21,6 @@ struct employee {
 };
 typedef struct employee node;
 typedef node *link;
-
 
 
 link findnode(link head, int num) {
@@ -66,7 +63,6 @@ int main(int argc, char *argv[]) {
 		printf("(1)add (2)exit==>");
 		scanf("%d", &sel);
 		if (sel != 2) {
-
 			printf("姓名 學號 數學成績 英文成績:");
 			new1 = (s_data*) malloc(sizeof(s_data));
 			scanf("%s %s %d %d", new1->name, new1->no, &new1->Math, &new1->Eng);

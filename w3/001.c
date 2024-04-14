@@ -1,10 +1,4 @@
 #include <stdio.h>
-
-#include <stdlib.h>
-
-
-
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input Loop */
@@ -15,7 +9,7 @@ int main(int argc, char *argv[]) {
 		for (j = 0; j < 6; j++) printf("%d ", a[i][j]);
 		printf("\n");
 	}
-	p = &a[0][0];
+	p = &a[0][0];//use pointer
 	printf("\n");
 	for (i = 0; i < 5; i++) {
 		for (j = 0; j < 6; j++) printf("%d ", *(p++));
@@ -23,3 +17,5 @@ int main(int argc, char *argv[]) {
 	}
 	return 0;
 }
+
+//hw8/12/13/14/15/16/ 18/19

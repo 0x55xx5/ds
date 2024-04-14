@@ -19,7 +19,7 @@ link creat_link(int data[4]) {
 			printf("Error!!ram alloc failed!!\n");
 			exit(i);
 		}
-		if (i == 0) {
+		if (i == 0) { 
 			newnode->coef = data[i];
 			newnode->exp = 3 - i;
 			newnode->next = NULL;
@@ -93,7 +93,7 @@ int main() {
 	print_link(c);
 }
 /*
-
+多項是以串列表示
 original A=3X^3 + 4X + 2
 original B=6X^3 + 8X^2 + 6X + 9
 ### :
@@ -105,3 +105,4 @@ Process exited after 0.1427 seconds with return value 0 (0 ms cpu time, 2772 KB 
 Press ANY key to exit...
 
 */
+//hw1/2/7/9

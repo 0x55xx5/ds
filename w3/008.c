@@ -7,8 +7,6 @@ void MatrixMultiply (int*, int*, int*, int, int, int);
 void PrintPoly(int Poly[], int items);
 void PolySum(int Poly1[ITEMS], int Poly2[ITEMS]);
 int main(int argc, char *argv[]) {
-
-
 	int *A1, *B1, *C1;
 	int M, N, P;
 	printf("enter matrix A (M,N): \n");
@@ -48,8 +46,8 @@ int main(int argc, char *argv[]) {
 		for (int j = 0; j < P; j++) printf("%d\t", B1[i * P + j]);
 		printf("|\n");
 	}
-	printf("[A]Multiply[B]\n");
-	C1 = (int*)malloc(M * P * sizeof(int)); //_
+	printf("[A]Multiply*[B]\n");
+	C1 = (int*)malloc(M * P * sizeof(int)); //new array
 	MatrixMultiply (A1, B1, C1, M, N, P); //result
 	for (int i = 0; i < M; i++) {
 		for (int j = 0; j < P; j++) printf("%d\t", C1[i * P + j]);
@@ -94,36 +92,35 @@ void MatrixMultiply (int* arrA, int* arrB, int* arrC, int M, int N, int P) {
 		}
 }
 /*
-
 enter matrix A (M,N):
-M= 2
-N= 3
+M= 3
+N= 2
 [請輸入矩陣A的各個元素]
-a0 0=1
-a0 1=2
-a0 2=2
+a0 0=5
+a0 1=4
 a1 0=3
-a1 1=2
-a1 2=1
+a1 1=6
+a2 0=7
+a2 1=8
 enter matrix B (N,P):
 N= 3
 P= 2
 [請輸入矩陣B的各個元素]
 b0 0=3
-b0 1=2
-b1 0=1
-b1 1=2
+b0 1=4
+b1 0=5
+b1 1=7
 b2 0=3
-b2 1=1
+b2 1=6
 A matrix :
-| 1    2       2       |
-| 3    2       1       |
+| 5    4       3       |
+| 6    7       8       |
+| -1637926414  134229809       3       |
 B matrix:
-| 3    2       |
-| 1    2       |
-| 3    1       |
-[A]Multiply[B]
-11      8
-14      11
-
+| 3    4       |
+| 5    7       |
+| 3    6       |
+[A]Multiply*[B]
+44      66
+77      121
 */

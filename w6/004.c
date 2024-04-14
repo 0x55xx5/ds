@@ -4,34 +4,7 @@
 #include <math.h>
 #include <string.h>
 
-
-
-struct stu {
-	char name[20], no[10];
-	int Math, Eng;
-	struct stu *rlink, *llink;
-};
-
-typedef struct stu s_data;
-s_data *ptr, *head, *new_data;
-void print_link(s_data *head) { //雙向
-	s_data *ptr = head, *pre;
-	printf("向右\n");
-	do {
-		printf("name %s\tno:%s\t MATH:%d\t ENG :%d\n", ptr->name, ptr->no, ptr->Math, ptr->Eng);
-		pre = ptr;
-		ptr = ptr->rlink;
-	} while (ptr != NULL);
-	printf("向左\n");
-	ptr = pre;
-	do {
-		printf("name %s\tno:%s\t MATH:%d\t ENG :%d\n", ptr->name, ptr->no, ptr->Math, ptr->Eng);
-		ptr = ptr->llink;
-	} while (ptr != NULL);
-}
-
-
-
+//雙向 add del find 
 struct emp {
 	int num, sal;
 	char name[10];
@@ -78,22 +51,22 @@ void print_emp(link1 h) {
 
 
 link1 insert(link1 head1, link1 ptr1, int num, int sal, char name[10]) {
-	link1 newnode1 = (link1)malloc(sizeof(node_emp));
-	newnode1->llink = newnode1->rlink = NULL;
+	link1 newnode1 = (link1)malloc(sizeof(node_emp));//init new
+	newnode1->llink = newnode1->rlink = NULL;//init
 	newnode1->num = num;
 	newnode1->sal = sal;
 	strcpy(newnode1->name, name);
 	if (head1 == NULL) {
 		return newnode1;
-	} //new
+	} 
 	else {
-		if (ptr1 == head1) {
+		if (ptr1 == head1) {//add to head loc
 			head1->llink = newnode1;
 			newnode1->rlink = head1;
 			head1 = newnode1;
-		} //add to head loc
+		} 
 		else {
-			if (ptr1->rlink == NULL) {
+			if (ptr1->rlink == NULL) {//add to tail
 				ptr1->rlink = newnode1;
 				newnode1->llink = ptr1;
 			} else { //插入中間節點的位置
@@ -108,7 +81,7 @@ link1 insert(link1 head1, link1 ptr1, int num, int sal, char name[10]) {
 }
 
 
-link1 delete1(link1 head, link1 del) { //###G1
+link1 delete1(link1 head, link1 del) { 
 	if (head == NULL) {
 		printf("empty\n");    //###EZ
 		return NULL;
@@ -122,10 +95,10 @@ link1 delete1(link1 head, link1 del) { //###G1
 		head->llink = NULL;
 	} else {
 		if (del->rlink == NULL) {
-			del->llink->rlink = NULL;    //del mid
+			del->llink->rlink = NULL;    //del tail
 		} else {
 			del->llink->rlink = del->rlink;
-			del->rlink->llink = del->llink;
+			del->rlink->llink = del->llink;//del mid
 		}
 
 	}
@@ -160,20 +133,17 @@ int main() {
 			newnode1->llink = left;
 			left = newnode1;
 		}
-		ptr1 = head1;
-		print_emp(head1);
+		
 		printf("\n\t emNo   name\t   sal\n");
 		printf("\t==============================\n");
-		//ptr1 = head1;
-		/*
+		ptr1 = head1;
+		
 		while (ptr1 != NULL) {
 				printf("-\t[%2d]\t[ %-10s]\t[%3d]\n", ptr1->num, ptr1->name, ptr1->sal);
-				ptr1 = ptr1->rlink;*/
+				ptr1 = ptr1->rlink;
+		}
 	}
 
-
-
-	
 
 	//CRUD
 
@@ -318,10 +288,6 @@ no    name      sa
 請輸入要插入其後的員工編號,如輸入的編號不在此串列中,
 新輸入的員工節點將視為此串列的第一個節點,要結束插入過程,enter -1:
 
-
-
-
-
 enter no to del 1043
 del 1043 employee name: Jasica sal:52182
 
@@ -346,8 +312,5 @@ o   name                sal
 enter no to del 1041
 
 --------------------------------
-Process exited after 71.41 seconds with return value 3221225477 (453.1 ms cpu time, 2924 KB mem used).
-
-Press ANY key to exit...
 
 */

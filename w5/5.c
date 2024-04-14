@@ -128,7 +128,7 @@ int main(int argc, char *argv[]) {
 		///
 	}
 	
-	
+	//兩串列結合
 	char namedata2[12][10]={{"May"},{"John"},{"Michael"}, {"Andy"},{"Tom"},{"Jane"},{"Yoko"},{"Axel"},{"Alex"},{"Judy"},{"Kelly"},{"Lucy"}};
 	srand((unsigned)time(NULL));
 	for (i=0;i<12;i++) { data[i][0]=i+13; data[i][1]=rand()%40+41; }
@@ -147,7 +147,7 @@ int main(int argc, char *argv[]) {
 				ptr1=ptr1->next;
 		}
 	
-		i=0; ptr1=concatlist (head1, head2); //link
+		i=0; ptr1=concatlist (head1, head2); //兩串列結合
 		printf("result : \n");
 		while (ptr1!=NULL) { //print
 			if (ptr1->next != NULL) printf("[%2d %6s %3d] -> ",ptr1->num,ptr1->name,ptr1->salary);
@@ -172,11 +172,7 @@ NUM    NAME   SALARY
 [1037]  [ Amy    ]      [ 21100]
 [1041]  [ Bob    ]      [ 32196]
 [1046]  [ Jack   ]      [ 25776]
-reverse:
-[1046   Jack 25776] -> [1041    Bob 32196] -> [1037    Amy 21100] ->
-[1031 Hanson 32769] -> [1043 Jasica 52182] -> [1018   Lisa 44145] ->
-[1014  Ricky 25676] -> [1012   Mark 42660] -> [1007   John 31299] ->
-[1003  Marry 27556] -> [1002  Scott 24388] -> [1001_ Allen_32367]
+
 
 result :
 [1046   Jack 25776] -> [1041    Bob 32196] -> [1037    Amy 21100] ->

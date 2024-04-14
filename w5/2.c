@@ -35,10 +35,10 @@ link insertnode (link head, link ptr, int num, int salary, char name[10]) {
 		head = InsertNode;
 	} else {
 		if (ptr->next == NULL) ptr->next = InsertNode; //插入最後
-		else {
+		else {//INSERT中間
 			InsertNode->next = ptr->next;
 			ptr->next = InsertNode;
-		} //中間
+		} 
 	}
 	return head;
 }
@@ -71,7 +71,6 @@ link concatlist (link ptr1, link ptr2) {
 	return ptr1;
 }
 
-/* run this program using the console pauser or add your own getch, system("pause") or input Loop */
 int main(int argc, char *argv[]) {
 
 
@@ -103,10 +102,10 @@ int main(int argc, char *argv[]) {
 		ptr1 = ptr1->next;
 
 	}
-	printf("NUM    NAME   SALARY    \n");
-	printf("\t============\n");
+	printf("NUM.    NAME   SALARY    \n");
+	printf("\t====================\n");
 	link h = head1;
-	while (h != NULL) {
+	while (h != NULL) {//SHOW DATA
 		printf("\t[%4d]\t[ %-7s]\t[%6d]\n", h->num, h->name, h->salary);
 		h = h->next;
 	}
@@ -126,9 +125,9 @@ int main(int argc, char *argv[]) {
 			head1 = insertnode(head1, ptr1, new_num, new_salary, new_name);
 
 		}
-		printf("NUM    NAME   SALARY    \n");
-		printf("\t================ =============\n");
-		link h = head1;
+		printf("NUM.    NAME   SALARY    \n");
+		printf("\t=============================\n");
+		link h = head1;//PRINT
 		while (h != NULL) {
 			printf("\t[%4d]\t[ %-7s]\t[%6d]\n", h->num, h->name, h->salary);
 			h = h->next;
@@ -138,8 +137,8 @@ int main(int argc, char *argv[]) {
 
 	ptr1 = head1;
 	printf("NUM    NAME   SALARY    \n");
-	printf("\t================ =============\n");
-	while (ptr1 != NULL) {
+	printf("\t=============================\n");
+	while (ptr1 != NULL) {//PRINT
 		printf("\t[%4d]\t[ %-7s]\t[%6d]\n", ptr1->num, ptr1->name, ptr1->salary);
 		ptr1 = ptr1->next;
 	}
@@ -224,14 +223,5 @@ NUM    NAME   SALARY
 [1041]  [ Bob    ]      [ 32196]
 [1046]  [ Jack   ]      [ 25776]
 [1048]  [ namamm ]      [ 45777]
-
---------------------------------
-Process exited after 30.94 seconds with return value 0 (156.2 ms cpu time, 2816 KB mem used).
-
-Press ANY key to exit...
-
-
-
-
 
  */

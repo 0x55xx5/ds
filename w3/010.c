@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 #define ITEMS 6
-void MatrixMultiply (int*, int*, int*, int, int, int);
 void PrintPoly(int Poly[], int items);
 void PolySum(int Poly1[ITEMS], int Poly2[ITEMS]);
 int main(int argc, char *argv[]) {
@@ -41,21 +40,10 @@ void PolySum (int Poly1[ITEMS], int Poly2[ITEMS]) {
 	for (i = 1; i <= Poly1[0] + 1; i++) result[i] = Poly1[i] + Poly2[i]; /*#*#*/ PrintPoly(result, ITEMS);
 }
 
-void MatrixMultiply (int* arrA, int* arrB, int* arrC, int M, int N, int P) {
-	int i, j, k, Temp;
-	if (M <= 0 || N <= 0 || P <= 0) {
-		printf("error M,N,P must great than  0\n");
-		return;
-	}
-	for (i = 0; i < M; i++)
-		for (j = 0; j < P; j++) {
-			Temp = 0;
-			for (k = 0; k < N; k++) Temp = Temp + arrA[i * N + k] * arrB[k * P + j];
-			arrC[i * P + j] = Temp;
-		}
-}
 /*
 
-
+A=> 3X^4 +7X^3 +6X^1 +2
+B=> 1X^4 +5X^3 +2X^2 +9
+A+B =>4X^4 +12X^3 +2X^2 +6X^1 +11
 
 */

@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 		ind++;
 		*(com + ind) = cnt;
 		ind++;
-		printf("compressed array \n");
+		printf("RANDOM VALS array \n");
 		for (i = 0; i < (cnt + 1) * 3; i += 3) printf("%d %d %5d\n", *(com + i), *(com + i + 1), *(com + i + 2));
 		for (i = 0; i < cnt; i++) {
 			i1 = rand() % m;
@@ -69,25 +69,51 @@ int main(int argc, char *argv[]) {
 
 
 /*
-
-enter row til -1-->3
-enter col til -1-->3
-enter non-val-->4
-array is
-2
-7
-0
-6
-0
-1
-0
-0
-0
+enter row til -1-->15
+enter col til -1-->15
+enter nonvals-->8
+RANDOM VALS array
+15 15     8
+0 0     0
+0 0     0
+0 0     0
+0 0     0
+0 0     0
+0 0     0
+0 0     0
+0 0     0
+(8,2) produce-->15
+(14,14) produce-->18
+(5,1) produce-->12
+(2,0) produce-->18
+(7,3) produce-->4
+(2,7) produce-->14
+(4,2) produce-->5
+(13,3) produce-->15
+array
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+18       0       0       0       0       0       0      14       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       5       0       0       0       0       0       0       0       0       0       0       0       0
+0      12       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       4       0       0       0       0       0       0       0       0       0       0       0
+0       0      15       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+0       0       0      15       0       0       0       0       0       0       0       0       0       0       0
+0       0       0       0       0       0       0       0       0       0       0       0       0       0      18
 compressed
-3 3 4
-0 0 2
-0 1 7
-1 0 6
-1 2 1
-
+15 15 8
+2 0 18
+2 7 14
+4 2 5
+5 1 12
+7 3 4
+8 2 15
+13 3 15
+14 14 18
 */

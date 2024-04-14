@@ -6,7 +6,6 @@ int main(int argc, char *argv[]) {
 
 	int i, n, m, j, s;
 
-
 	int k1, k2, pt;
 	printf("enter num til -1-->");
 	scanf("%d", &n);
@@ -34,7 +33,7 @@ int main(int argc, char *argv[]) {
 		}
 
 
-		for (i = 0; i < n; i++) { //$4ALBER
+		for (i = 0; i < n; i++) { //RANKING
 			for (j = i + 1; j < n; j++) {
 				k1 = m + (m + 2) * i;
 				k2 = m + (m + 2) * j;
@@ -64,31 +63,33 @@ int main(int argc, char *argv[]) {
 	}
 }
 /**
- enter num til -1-->10
+  enter num til -1-->10
   enter subs-1-->2
   Score1 avg              rank
   Score2 avg              rank
-  37    31    34     1
-  12    63    37     1
-  73    47    60     1
-  41    61    51     1
-  49    96    72     1
-  55    17    36     1
-  2    85    43     1
-  90    70    80     1
-  28     4    16     1
-  92     5    48     1
+  40    50    45     1
+  1    77    39     1
+  53    26    39     1
+  42    54    48     1
+  35    77    56     1
+  70    16    43     1
+  28    99    63     1
+  25    50    37     1
+  49    14    31     1
+  25    77    51     1
   Score1 avg              rank
   Score2 avg              rank
-  37    31    34     9
-  12    63    37     7
-  73    47    60     3
-  41    61    51     4
-  49    96    72     2
-  55    17    36     8
-  2    85    43     6
-  90    70    80     1
-  28     4    16    10
-  92     5    48     5
-  enter num til -1--> 
+  40    50    45     5
+  1    77    39     7
+  53    26    39     7
+  42    54    48     4
+  35    77    56     2
+  70    16    43     6
+  28    99    63     1
+  25    50    37     9
+  49    14    31    10
+  25    77    51     3
+  enter num til -1-->
+
  */
+//1/10/11/12/13

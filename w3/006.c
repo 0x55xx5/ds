@@ -2,10 +2,6 @@
 #include <stdlib.h> 
 #include <math.h>
 #define ITEMS 6
-/* run this program using the console pauser or add your own getch, system("pause") or input Loop */
-void MatrixMultiply (int*, int*, int*, int, int, int);
-void PrintPoly(int Poly[], int items);
-void PolySum(int Poly1[ITEMS], int Poly2[ITEMS]);
 int main(int argc, char *argv[]) {
 	int is, ie, js, je, ks, ke, ms, me, sta, addc, b, tr2, tc2, tr3, tc3, tr1, tc1, i, j, k, m, n;
 	while (1) {
@@ -40,15 +36,35 @@ int main(int argc, char *argv[]) {
 		scanf("%d", &j);
 		printf("cal 3rd-->");
 		scanf("%d", &k);
-		printf("cal 4rd-->");
+		printf("cal 4th-->");
 		scanf("%d", &m);
 //row major
 		addc=sta+((i-is)*tr3+(j-js)*tr2+(k-ks)*tr1+m-ms)*b;
-		printf("[d][%d] [%d] [%d][2] at %d\n",i,j,k,m,addc);
+		printf("[%d][%d] [%d] [%d][2] at %d\n",i,j,k,m,addc);
 //col major
 		addc=sta+((m-ms)*tc3+(k-ks)*tc2+(j-js)*tc1+i-is)*b;
-		printf("[d][%d] [%d] [%d] at %d\n",i,j,k,m,addc); 
+		printf("[%d][%d] [%d] [%d] at %d\n",i,j,k,m,addc); 
 	}
 	
 	return 0;
 }
+/*
+1D stert-->1
+1D end-->4
+2d start-->1
+2d end-->6
+3d start-->1
+3d end-->5
+4d start-->1
+4d end-->3
+unit size-->1
+start at-->200
+tr3=90 tr2=15 tr1=3 tc3=120 tc2=24 tcl=4
+cal row-->3
+cal col-->1
+cal 3rd-->3
+cal 4th-->1
+[3][1] [3] [1][2] at 386
+[3][1] [3] [1] at 250
+1D stert-->
+*/

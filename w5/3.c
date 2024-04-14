@@ -72,7 +72,7 @@ link concatlist (link ptr1, link ptr2) {
 	return ptr1;
 }
 
-/* run this program using the console pauser or add your own getch, system("pause") or input Loop */
+/* DEL DEMO FROM LINKEDLIST */
 int main(int argc, char *argv[]) {
 
 
@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
 		printf("\t[%4d]\t[ %-7s]\t[%6d]\n", ptr1->num, ptr1->name, ptr1->salary);
 		ptr1 = ptr1->next;
 	}
-	///
+	///del
 
 	int findword = 0;
 	while (1) {
@@ -178,23 +178,7 @@ int main(int argc, char *argv[]) {
 }
 
 /*
-NUM    NAME   SALARY
-============
-[1001]  [ Allen  ]      [ 32367]
-[1002]  [ Scott  ]      [ 24388]
-[1003]  [ Marry  ]      [ 27556]
-[1007]  [ John   ]      [ 31299]
-[1012]  [ Mark   ]      [ 42660]
-[1014]  [ Ricky  ]      [ 25676]
-[1018]  [ Lisa   ]      [ 44145]
-[1043]  [ Jasica ]      [ 52182]
-[1031]  [ Hanson ]      [ 32769]
-[1037]  [ Amy    ]      [ 21100]
-[1041]  [ Bob    ]      [ 32196]
-[1046]  [ Jack   ]      [ 25776]
 
-請輸入要插入其後的員工編號,如輸入的編號不在此串列中,
-新輸入的員工節點將視為此串列的串列首,要結束插入過程,請輸入-1:-1
 NUM    NAME   SALARY
 ================ =============
 [1001]  [ Allen  ]      [ 32367]
@@ -254,3 +238,5 @@ employee no             name     salary
 enter no to del -1:
 
 */
+
+

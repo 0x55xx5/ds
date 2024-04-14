@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-
+// circle licked lsit len insert del
 struct emp { int num, sal; char name[10]; struct emp *next; };
 typedef struct emp node_emp;
 typedef node_emp *link1;
@@ -40,17 +40,17 @@ link1 findnode (link1 head, int num) {
 link1 insert(link1 head1, link1 ptr1, int num, int sal, char name[10]) { //ADD TO CIRCLE LINK
 	link1 newnode1=(link1)malloc(sizeof (node_emp));
 	newnode1->num=num; newnode1->sal=sal; strcpy (newnode1->name, name);
-	if (head1== NULL) { newnode1->next=head1; return newnode1; } //ADD
+	if (head1== NULL) { newnode1->next=head1; return newnode1; } //ADD FIRST
 	else {
 		if(ptr1==head1) 
-		{//ADD TO HEAD
+		{//ATTACH TO HEAD
 		newnode1->next=head1; link1 p=head1; 
 			do { p=p->next; } 
 			while (p->next != head1); 
 			p->next=newnode1; head1=newnode1;
 			
 		}
-		else 
+		else //ADD ANY LOCATION 
 		{ newnode1->next=ptr1->next; ptr1->next=newnode1; }
 		
 	}
@@ -69,16 +69,16 @@ link1 delete1(link1 head,link1 del) { //DEL CIRCLE LINK
 	if(del==head){
 		link1 p=head; //DEL HEAD
 		do { p=p->next; } 
-		while (p->next != head); p->next=head->next; head=head->next; 
+		while (p->next != head); p->next=head->next ; head=head->next; 
 	} //
 	else {
 		link1 p=head, pre; 
 		do { pre=p; p=p->next; } while (p != del); pre->next=del->next; //del tail or mid
 	
 	}
-	printf("del  no %d name  %s:sal %d\n", del->num, del->name, del->sal); free (del); return head;
+	printf("del  no. %d name  %s:sal %d\n", del->num, del->name, del->sal); 
+	free (del); return head;
 	
-
 }
 
 int main(){

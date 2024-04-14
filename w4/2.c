@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 struct employee {
 	int num, salary;
 	char name[10];
@@ -11,8 +10,6 @@ struct employee {
 };
 typedef struct employee node;
 typedef node *link;
-
-
 
 link findnode(link head, int num) {
 	link ptr;
@@ -37,10 +34,10 @@ link insertnode (link head, link ptr, int num, int salary, char name[10]) {
 		head = InsertNode;
 	} else {
 		if (ptr->next == NULL) ptr->next = InsertNode; //插入最後
-		else {
+		else { //INSERT中間
 			InsertNode->next = ptr->next;
 			ptr->next = InsertNode;
-		} //中間
+		}
 	}
 	return head;
 }
@@ -50,17 +47,15 @@ int main(int argc, char *argv[]) {
 	char new_name[10];
 	int i,j,position=0,find;
 	int data[12][2]={1001,31244,1002,68900,1003,91234,1007,85000,1012,56000,1014,28000,1018,23000,1043,31200,1031,31500,1037,45462,1041,56244,1046,21344};
-char  namedata[12][10]={{"A"},{"B"},{"C"},{"D"},{"E"},{"F"},{"G"},{"H"},{"I"},{"J"},{"K"},{"L"}};
-	printf("no salary no salary no salary no salary\n ");
+	char  namedata[12][10]={{"A"},{"B"},{"C"},{"D"},{"E"},{"F"},{"G"},{"H"},{"I"},{"J"},{"K"},{"L"}};
+	printf("no. salary \n ");
 		printf("===================================\n ");
 	
 	for(int i=0;i<3;i++){
 		for(int j=0;j<4;j++){
-			printf("[%4d] $NTD%5d",data[j*3+i][0],data[j*3+i][1]);
-			printf("\n");
-			//TODO
+			printf("[%4d] $NTD %5d",data[j*3+i][0],data[j*3+i][1]);
 		}
-		//TODO
+	printf("\n");
 	}
 printf("===================================\n ");
 	head = (link)malloc(sizeof(node));
@@ -72,8 +67,8 @@ printf("===================================\n ");
 	for (j = 0; j < 10; j++) head->name [j] = namedata[0][j];
 	head->salary = data[0][1];
 	head->next = NULL;
-	ptr = head;
-	for (i = 1; i < 12; i++) {
+	ptr = head;//INIT
+	for (i = 1; i < 12; i++) {//CREATE LINKEDLIST
 		newnode = (link)malloc(sizeof(node));
 		newnode->num = data[i][0];
 		for (j = 0; j < 10; j++) newnode->name [j] = namedata[i][j];
@@ -103,7 +98,7 @@ printf("===================================\n ");
 
 
 	ptr = head;
-	printf("\n\temployee no		name\t salary\n");
+	printf("\n\temployee no.		name\t salary\n");
 	printf("\t==============================\n");
 	while (ptr != NULL) {
 		printf("\t[%2d]\t[ %-7s]\t[%3d]\n", ptr->num, ptr->name, ptr->salary);
@@ -115,7 +110,7 @@ printf("===================================\n ");
 
 
 /*
-no salary no salary no salary no salary
+no salary
 ===================================
 [1001] $NTD31244
 [1007] $NTD85000

@@ -2,10 +2,6 @@
 #include <stdlib.h> 
 #include <math.h>
 #define ITEMS 6
-/* run this program using the console pauser or add your own getch, system("pause") or input Loop */
-void MatrixMultiply (int*, int*, int*, int, int, int);
-void PrintPoly(int Poly[], int items);
-void PolySum(int Poly1[ITEMS], int Poly2[ITEMS]);
 int main(int argc, char *argv[]) {
 	int is, ie, js, je, ks, ke, ms, me, sta, addc, b, tr2, tc2, tr3, tc3, tr1, tc1, i, j, k, m, n;
 	while (1) {
@@ -43,3 +39,20 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
+/*
+1D stert-->1
+1D end-->3
+2d start-->1
+2d end-->4
+3d start-->1
+3d end-->5
+unit size-->1
+start at-->100
+cal row-->1
+cal col-->2
+cal 3rd-->3
+[1] [2] [3]addr  is 107
+[1] [2] [3] addr is 127
+1D stert-->
+
+*/

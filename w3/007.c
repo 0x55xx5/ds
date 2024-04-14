@@ -2,10 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 #define ITEMS 6
-/* run this program using the console pauser or add your own getch, system("pause") or input Loop */
-void MatrixMultiply (int*, int*, int*, int, int, int);
-void PrintPoly(int Poly[], int items);
-void PolySum(int Poly1[ITEMS], int Poly2[ITEMS]);
 int main(int argc, char *argv[]) {
 
 
@@ -17,39 +13,41 @@ int main(int argc, char *argv[]) {
 	for (int i = 0; i < 3; i++) {
 		printf(" | ");
 		for (int j = 0; j < 3; j++) printf("%d\t", A[i][j]);
-		printf("|\n");
+		printf("matrix A\n");
 	}
 
 	printf("B matrix: \n");
 	for (int i = 0; i < 3; i++) {
 		printf(" | ");
 		for (int j = 0; j < 3; j++) printf("%d\t", B[i][j]);
-		printf("|\n");
+		printf("matrix B\n");
 	}
 
 	printf("[A matrix+ B matrix]\n");
 	for (int i = 0; i < 3; i++) {
 		printf(" | ");
 		for (int j = 0; j < 3; j++) printf("%d\t", C[i][j]);
-		printf("|\n");
+		printf("matrix A+B result:\n");
 	}
 
 	return 0;
 }
 /*
-
 A matrix:
-| 1    3       5       |
-| 7    9       11      |
-| 13   15      17      |
+| 1    3       5       matrix A
+| 7    9       11      matrix A
+| 13   15      17      matrix A
 B matrix:
-| 9    8       7       |
-| 6    5       4       |
-| 3    2       1       |
+| 9    8       7       matrix B
+| 6    5       4       matrix B
+| 3    2       1       matrix B
 [A matrix+ B matrix]
-| 10   11      12      |
-| 13   14      15      |
-| 16   17      18      |
+| 10   11      12      matrix A+B result:
+| 13   14      15      matrix A+B result:
+| 16   17      18      matrix A+B result:
 
 --------------------------------
+Process exited after 0.03462 seconds with return value 0 (0 ms cpu time, 3708 KB mem used).
+
+Press ANY key to exit...
 */

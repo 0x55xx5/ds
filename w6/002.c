@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-
+//CIRCLE LINKEDLIST DEMO
 
 struct student { char name[20]; char no[10]; struct student *next; };
 typedef struct student s_data;
@@ -20,15 +20,17 @@ int main() {
 	
 	int select, student_no=0, i=0; float Msum=0,Esum=0; char na[20]; char n1[10];
 	do {
-		printf("(1add (2)exit =>"); scanf("%d", &select);
+		printf("(1)add (2)exit =>"); scanf("%d", &select);
 		if (select != 2) {
 			printf("name 	 stuno:"); scanf("%s %s",na,n1);
 			if (i==0){
+				//CTRATE
 				ptr=head=(s_data*) malloc(sizeof(s_data)); head->next=ptr;
 				strcpy(head->no,n1); strcpy(head->name,na); i=1;
 				
 			}
 			else {
+				//CREATE CIRCLE LINKEDLIST
 				new_data=(s_data*) malloc(sizeof(s_data));
 				ptr->next = new_data; strcpy(new_data->no,n1); strcpy(new_data->name,na); new_data->next = head; ptr = new_data;
 			}
@@ -38,8 +40,9 @@ int main() {
 print_stu(head);
 }
 /*
+//CIRCLE LINKEDLIST DEMO
 
-(1add (2)exit =>1
+(1)add (2)exit =>1
 name     stuno:wwqwq 0001
 name : wwqwq    stoNo:0001
 ------------------------

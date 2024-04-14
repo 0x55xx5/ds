@@ -6,9 +6,9 @@
 int main(int argc, char *argv[]) {
 	
 	int a[3][5]={15*0}; int *p; p=&a[0][0];
-	printf("a[0][0]addr-->%p %p==>",a, p);
-	printf("a[2][3]addr-->%p,", (p+13));
-	printf("a[2][3]addr-->%p\n",&a[2][3]);
+	printf("a[0][0] mem addr-->%p %p==>",a, p);
+	printf("a[2][3] mem addr-->%p,", (p+13));
+	printf("a[2][3] mem addr-->%p\n",&a[2][3]);
 	int arr[2][2], sum;
 	printf("|al b1|\n|a2 b2|\n");
 	printf("enter al:"); scanf("%d",&arr[0][0]);
@@ -21,3 +21,15 @@ int main(int argc, char *argv[]) {
 	printf("sum=%d\n",sum);
 	return 0;
 }
+/*
+a[0][0]addr-->000000d0fb7ffd80 000000d0fb7ffd80==>a[2][3]addr-->000000d0fb7ffdb4,a[2][3]addr-->000000d0fb7ffdb4
+|al b1|
+|a2 b2|
+enter al:11
+enter b1:12
+a2:13
+b2:14
+|11     12|
+|13     14|
+sum=-2
+*/

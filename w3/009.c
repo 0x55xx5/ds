@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	for (int i = 0; i < 3; i++) for (int j = 0; j < 4; j++) arrB[i][j] = arrA[j][i];
-	printf("[轉智矩陣]\n");
+	printf("[轉置矩陣]\n");
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 4; j++) printf("%d\t", arrB[i][j]);
 		printf("\n");
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 5       6       7
 9       10      11
 13      14      15
-[轉智矩陣]
+[轉置矩陣]
 1       5       9       13
 2       6       10      14
 3       7       11      15
