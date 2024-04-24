@@ -22,4 +22,11 @@ int main(int argc, char *argv[]) {
 	printf("\n");
 
 }
+/*
+5 5 000000a0507ffdbc 000000a0507ffdbc
+a of address p-->000000a0507ffd80a[4] of address-->000000a0507ffd90
+5 6 7 8 9
+5 6 7 8 9
+5 6 7 8 9
 
+*/

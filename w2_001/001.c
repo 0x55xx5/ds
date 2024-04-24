@@ -30,3 +30,12 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
+/*
+1 1
+00000002d6fff9d0 00000002d6fff9d0
+1 2 3 4 0 0 0 0 0 0
+1 2 3 4 0 0 0 0 0 0
+give me the SIZE-->
+
+
+*/
