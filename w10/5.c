@@ -14,7 +14,7 @@ int main()
     {
         printf("[a]表示存入一個數值[d]表示取出一個數值[e]表示跳出此程式: ");
         // c=getche();
-        system("stty -icanon");
+        //system("stty -icanon");
         c = getchar();
         switch (c)
         {
