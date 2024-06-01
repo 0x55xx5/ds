@@ -25,7 +25,7 @@ int main()
         ptr = &(head[i]);
         for (j = 0; j < 14; j++)
         {
-            if (data[j][0] == 1)
+            if (data[j][0] == i)
             {
                 newnode = (link)malloc(sizeof(node));
                 newnode->val = data[j][1];
@@ -46,9 +46,9 @@ int main()
 content: 
 --
 頂點 1 =>[2]
-頂點 2 =>[2]
-頂點 3 =>[2]
-頂點 4 =>[2]
-頂點 5 =>[2]
+頂點 2 =>[1][5][3][4]
+頂點 3 =>[2][4][5]
+頂點 4 =>[2][3][5]
+頂點 5 =>[2][3][4]
 sh: pause: command not found
 */

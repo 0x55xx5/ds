@@ -25,7 +25,7 @@ void MinSpanTree(int start, int node, int edge)
         {
             if ((marked[j] == 0) && (smallest > value[j]))
             {
-                smallest - value[j];
+                smallest =value[j];
                 end_point = j;
             }
         }
@@ -68,8 +68,27 @@ int main(void)
     for (i = 0; i < node; i++)
     {
         if (i != start)
-            printf("連結頂點%d--到頂點％d", road[i], i);
+            printf("連結頂點%d--到頂點%d", road[i], i);
     }
     printf("totoal cost= %d\n", total);
     return 0;
 }
+/*
+
+圖形頂點個數= 3 
+圖形總邊數= 3
+請輸入第 1 個邊的起點,終點及邊長,數值之間以空白隔開 
+0
+1
+3
+第 1 個邊是從頂點 0 到頂點 1,length= 3 
+請輸入第 2 個邊的起點,終點及邊長,數值之間以空白隔開 
+0 2 4
+第 2 個邊是從頂點 0 到頂點 2,length= 4 
+請輸入第 3 個邊的起點,終點及邊長,數值之間以空白隔開 
+1 2 5
+第 3 個邊是從頂點 1 到頂點 2,length= 5 
+輸入最小成本擴張樹起始頂點: 0
+最小成本擴張樹路徑為 : 
+連結頂點0--到頂點1連結頂點0--到頂點2totoal cost= 7
+*/

@@ -1,4 +1,6 @@
 
+// Kruskal's algorithm
+
 #include <stdio.h>
 #include <stdlib.h>
 #define VERTS 6
