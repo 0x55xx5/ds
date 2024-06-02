@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/kevin/Desktop/hwds/untitled folder/ds/w14",
-      "program": "/Users/kevin/Desktop/hwds/untitled folder/ds/w14/build/Debug/outDebug"
+      "cwd": "/Users/kevin/Desktop/hwds/untitled folder/ds/w12",
+      "program": "/Users/kevin/Desktop/hwds/untitled folder/ds/w12/build/Debug/outDebug"
     }
   ]
 }

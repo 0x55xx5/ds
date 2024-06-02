@@ -1,4 +1,4 @@
-
+//環狀queue
 #include <stdio.h> 
 #include <stdlib.h>
 #define max 5
@@ -20,7 +20,7 @@ while(rear<max&&val!= -1) {
         }
 }
 
-printf("\n¶remaining data  : \n");
+printf("\nremaining data  : \n");
 if (front==rear) printf("empty!!\n");
 else
 {
@@ -49,7 +49,7 @@ withdraw data [36]
 請輸入一個值以存入佇列,欲取出值請輸入0。(結束輸入-1):48
 請輸入一個值以存入佇列,欲取出值請輸入0。(結束輸入-1):-1
 
-¶remaining data  : 
+remaining data  : 
 [48][54][64][48]
 */
 

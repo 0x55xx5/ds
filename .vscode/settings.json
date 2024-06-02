@@ -2,7 +2,8 @@
   "files.associations": {
     "curses.h": "c",
     "array": "c",
-    "vector": "c"
+    "vector": "c",
+    "stdio.h": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",

@@ -29,8 +29,6 @@ btree search (btree ptr,int val) {
         i++;
     }
 }
-
-
 int main() {
 int i,data,arr[]={7,1,4,2,8,13,12,11,15,9,5}; btree ptr=NULL;
 printf("original \n"); for (i=0;i<11;i++) { ptr=creat_tree(ptr,arr[i]); printf("[%2d] ",arr[i]); } printf("\n");
@@ -41,16 +39,19 @@ if((search(ptr,data)) !=NULL) printf("found val: [%3d] \n",data); else printf("N
 system("pause"); return 0;
 }
 /*
-
 original 
 [ 7] [ 1] [ 4] [ 2] [ 8] [13] [12] [11] [15] [ 9] [ 5] 
 find key?: 
-12
-4
-found val: [ 12] 
+2
+ser 4 times
+found val: [  2] 
 find key?: 
-555
+6
 NOT FOUND!!
+find key?: 
+9
+ser 6 times
+found val: [  9] 
 find key?: 
 
 */

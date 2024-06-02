@@ -1,4 +1,6 @@
 
+//串列表是一種特殊的二元樹，每個節點最多有兩個子節點，左子節點指向串列的下一個節點，
+//右子節點指向串列的前一個節點。
 #include <stdio.h>
 #include <stdlib.h>
 struct tree{ int data; struct tree *left, *right; };
@@ -12,11 +14,11 @@ btree creat_tree(btree root, int val){
     else {
         for (current=root; current!= NULL;) {
             backup=current;
-        if(current->data > val) current=current->left; else current=current->right;
-    }
+            if(current->data > val) current=current->left; else current=current->right;
+        }
      if(backup->data >val) backup->left=newnode; else backup->right=newnode;
     
-}
+    }
 return root;
 }
 

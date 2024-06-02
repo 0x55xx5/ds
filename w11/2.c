@@ -1,4 +1,4 @@
-
+//雙向queue
 #include <stdio.h>
 #include <stdlib.h>
 struct Node
@@ -20,13 +20,13 @@ void enqueue(int value)
         rear->next = node;
     rear = node;
 }
-
+//兩端取出
 int dequeue(int ac)
 {
     int value;
     que_list tmp, start,pre;
     if (!(front == NULL) && ac == 1)
-    {
+    {//從前端取出
         if (front == rear)
             rear = NULL;
         value = front->data;
@@ -35,7 +35,8 @@ int dequeue(int ac)
     }
     else if (!(rear == NULL) && ac == 2)
     {
-        start = front;
+        start = front;//存前端指標
+
         value = rear->data; 
         // 找尋最尾端節點的前一個節點
         tmp  = front;

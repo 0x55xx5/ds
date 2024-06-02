@@ -12,7 +12,8 @@ else {
     temp=(btree)malloc(sizeof(TreeNode));
     temp->value=(int)seq[index];
     temp->left=NULL; temp->right=NULL;
-    temp->left=create(seq,2*index,size); temp->right=create(seq,2*index+1,size);
+    temp->left=create(seq,2*index,size); 
+    temp->right=create(seq,2*index+1,size);
     return temp;
 }
 }
@@ -32,7 +33,11 @@ void postorder(btree node) {
 
 
 int cond(char opr, int num1, int num2) { switch (opr ) {
-case '*': return ( num1 * num2 ); break; case '/': return ( num1 / num2 ); break; case '+': return ( num1 + num2 ); break; case '-': return ( num1 - num2 ); break; case '%': return (num1 % num2 ); break;
+    case '*': return ( num1 * num2 ); break; 
+    case '/': return ( num1 / num2 ); break; 
+    case '+': return ( num1 + num2 ); break; 
+    case '-': return ( num1 - num2 ); break; 
+    case '%': return (num1 % num2 ); break;
 }
 return -1;
 }
@@ -47,20 +52,21 @@ int answer(btree node) {
 
 int main(void) { 
     char inf1[] = {' ','+','*','%','6','3','9','5'};
-    char inf2[] = {' ','+','+','+','*','%','/','*',
-    '1','2','3','2','6','3','2','2'};
+    char inf2[] = {' ','+','+','+','*','%','/','*','1','2','3','2','6','3','2','2'};
 
-    root=(btree)malloc(sizeof(TreeNode)); root2=(btree)malloc(sizeof(TreeNode)); root = create(inf1,1,8);
+    root=(btree)malloc(sizeof(TreeNode)); 
+    root2=(btree)malloc(sizeof(TreeNode)); 
+    root = create(inf1,1,8);
     printf("====example ====\n"); printf("=================================\n"); 
-    printf("===to inoder===: "); inorder(root);
+    printf("===to inoder===\n "); inorder(root);
     printf(" ===to preorder===\n"); preorder(root);
-    printf("\n===to postOrder===: "); postorder(root);
+    printf("\n===to postOrder===\n "); postorder(root);
     printf("\n result: "); printf("%d",answer(root)); printf("\n");
     root2 = create(inf2,1,16); printf("\n\n");
     printf("====example ====\n"); printf("=================================\n"); 
-    printf("===to inoder===: "); inorder(root2);
+    printf("===to inoder===\n"); inorder(root2);
     printf(" ===to preorder===\n"); preorder(root2);
-    printf("\n===to postOrder===: "); postorder(root2);
+    printf("\n===to postorder===\n "); postorder(root2);
     printf("\nresult: "); printf("%d",answer(root2)); printf("\n");
     system("pause"); return 0;
 }
@@ -68,13 +74,20 @@ int main(void) {
 
 ====example ====
 =================================
-===to inoder===: 6*3+9%5 ===to preorder===
+===to inoder===
+ 6*3+9%5 ===to preorder===
 +*63%95
-===to postOrder===: 63*95%+
+===to postOrder===
+ 63*95%+
  result: 22
-2
+
 
 ====example ====
 =================================
-
+===to inoder===
+1*2+3%2+6/3+2*2 ===to preorder===
+++*12%32+/63*22
+===to postorder===
+ 12*32%+63/22*++
+result: 9
 */

@@ -37,19 +37,20 @@ int main() {
     printf("========\n"); 
     printf("inorder: \n"); inorder(ptr); 
     printf("\n"); printf("====================\n"); 
-    printf("\n"); preorder (ptr); printf("\n"); 
+    printf("preorder\n"); preorder(ptr); 
     printf("\n"); 
+    printf("postorder\n"); 
     postorder (ptr); printf("\n");
     system("pause"); return 0;
 }
 /*
- * 
- ========
+ 
+========
 inorder: 
 [ 1] [ 3] [ 5] [ 6] [ 8] [ 9] [12] [17] [24] 
 ====================
-
+preorder
 [ 5] [ 3] [ 1] [ 6] [24] [ 8] [12] [ 9] [17] 
-
+postorder
 [ 1] [ 3] [ 9] [17] [12] [ 8] [24] [ 6] [ 5] 
- * /
+ */
