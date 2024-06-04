@@ -150,3 +150,20 @@ int main()
     system("pause");
     return 0;
 }
+/*
+sh: 1: cls: not found
+4 queen solution: 
+1
+0Q00
+000Q
+Q000
+00Q0
+
+2
+00Q0
+Q000
+000Q
+0Q00
+
+total have 2 solution
+*/

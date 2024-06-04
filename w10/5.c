@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <curses.h>
+
 // #include <conio.h>//windows sdk
 #define MAX 10
 /*定義佇列的大小*/
@@ -65,3 +65,16 @@ int main()
     system("pause");
     return 0;
 }
+/*
+ [a]表示存入一個數值[d]表示取出一個數值[e]表示��出此程式: a
+
+[]: 11
+[a]表示存入一個數值[d]�示取出一個數值[e]表示跳出此程式: 
+[a]表示存入一個數值[d]表示取出一��數值[e]表示跳出此程式: a
+
+[]: 12
+[a]表示存入一個數值[d]�示取出一個數值[e]表示跳出此程式: 
+[a]表示存入一個數值[d]表示取出一��數值[e]表示跳出此程式: d
+
+[H]: [11]
+*/

@@ -44,3 +44,12 @@ int main() {
     } while (sel != 4);
     show(); system("pause"); return 0;
 }
+/*
+(1) (2) (3) (4)FH => 1
+Z :8
+7
+(1) (2) (3) (4)FH => 3
+front -> rear
+8       7
+(1) (2) (3) (4)FH => 
+*/

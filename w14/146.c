@@ -79,6 +79,7 @@ int main()
     for (j = 1; j < SIZE; j++)
         printf("頂點1到頂點%2d最短距離%3d\n", j, distance[j]);
     printf("\n");
+    system("pause");
     return 0;
 }
 /*

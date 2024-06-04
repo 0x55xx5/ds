@@ -3,7 +3,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 #define MAX 50
-char posfix [MAX];
+char posfix[MAX];
 int p1[MAX];
 int top=-1;
 void push(int value) { p1[++top]=value; }
@@ -45,3 +45,6 @@ while (1) {
 
 system("pause"); return 0;
 }
+/*
+postfix statement 2 3 * result:--->6
+*/
