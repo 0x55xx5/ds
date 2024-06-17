@@ -1,6 +1,6 @@
 
-#include <stdio.h> 
-#include <stdlib.h> 
+#include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
 #define Ver 6 // Prim's 節點數量
 int minKey(int key[], int mstSet[])

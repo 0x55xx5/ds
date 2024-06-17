@@ -1,4 +1,4 @@
-//雙向queue
+// 雙向queue
 #include <stdio.h>
 #include <stdlib.h>
 struct Node
@@ -20,13 +20,13 @@ void enqueue(int value)
         rear->next = node;
     rear = node;
 }
-//兩端取出
+// 兩端取出
 int dequeue(int ac)
 {
     int value;
-    que_list tmp, start,pre;
+    que_list tmp, start, pre;
     if (!(front == NULL) && ac == 1)
-    {//從前端取出
+    { // 從前端取出
         if (front == rear)
             rear = NULL;
         value = front->data;
@@ -35,18 +35,18 @@ int dequeue(int ac)
     }
     else if (!(rear == NULL) && ac == 2)
     {
-        start = front;//存前端指標
+        start = front; // 存前端指標
 
-        value = rear->data; 
+        value = rear->data;
         // 找尋最尾端節點的前一個節點
-        tmp  = front;
-        while (tmp != rear )
+        tmp = front;
+        while (tmp != rear)
         {
             pre = tmp;
             tmp = tmp->next;
         }
         free(tmp);
-        rear = pre; 
+        rear = pre;
         rear->next = NULL;
         return value;
     }
@@ -105,17 +105,17 @@ double queue by linkedin list
 ====================================
 add 1,get  2,end -1:1
 add data is :12
-remaining-->12 
+remaining-->12
 add 1,get  2,end -1:1
 add data is :24
-remaining-->12 24 
+remaining-->12 24
 add 1,get  2,end -1:1
 add data is :36
-remaining-->12 24 36 
+remaining-->12 24 36
 add 1,get  2,end -1:2
 data from front: 12
 data from rear: 36
-remaining-->24 
+remaining-->24
 add 1,get  2,end -1:-1
-remaining-->24 
+remaining-->24
 */

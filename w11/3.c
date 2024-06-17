@@ -1,7 +1,7 @@
 // binary search tree
-//knuth's algorithm
-//k is depth  node number is 2^k-1
-//階度i 最大2^(i-1)個節點
+// knuth's algorithm
+// k is depth  node number is 2^k-1
+// 階度i 最大2^(i-1)個節點
 #include <stdio.h>
 #include <stdlib.h>
 void Btree_create(int *btree, int *data, int length)
@@ -22,10 +22,10 @@ void Btree_create(int *btree, int *data, int length)
 }
 int main()
 {
-    int i, length = 9;//最差狀況
-    //int data[] = {0, 6, 3, 5, 4, 7, 8, 9, 2}; 
-     int data[] = {0, 9, 6, 3, 7, 1, 2, 8,4}; 
-    int btree[16] = {0};          
+    int i, length = 9; // 最差狀況
+    // int data[] = {0, 6, 3, 5, 4, 7, 8, 9, 2};
+    int data[] = {0, 9, 6, 3, 7, 1, 2, 8, 4};
+    int btree[16] = {0};
     printf("array : \n");
     for (i = 0; i < length; i++)
         printf("[%2d] ", data[i]);
@@ -39,10 +39,10 @@ int main()
     return 0;
 }
 /*
-   array : 
-[ 0] [ 6] [ 3] [ 5] [ 4] [ 7] [ 8] [ 9] [ 2] to tree 
+   array :
+[ 0] [ 6] [ 3] [ 5] [ 4] [ 7] [ 8] [ 9] [ 2] to tree
 
-[ 0] [ 6] [ 3] [ 7] [ 2] [ 5] [ 0] [ 8] [ 0] [ 0] [ 4] [ 0] [ 0] [ 0] [ 0] [ 9] 
+[ 0] [ 6] [ 3] [ 7] [ 2] [ 5] [ 0] [ 8] [ 0] [ 0] [ 4] [ 0] [ 0] [ 0] [ 0] [ 9]
 
 */
 // quiz 2:

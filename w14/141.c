@@ -127,15 +127,15 @@ int main()
     return 0;
 }
 
-/*process the point 1-->[1] [2] [3] 
-process the point 2-->[2] [1] [4] [5] 
-process the point 3-->[3] [1] [6] [7] 
-process the point 4-->[4] [2] [8] 
-process the point 5-->[5] [2] [8] 
-process the point 6-->[6] [3] [8] 
-process the point 7-->[7] [3] [8] 
-process the point 8-->[8] [4] [5] [6] [7] 
-圖形的相鄰串列內容: 
+/*process the point 1-->[1] [2] [3]
+process the point 2-->[2] [1] [4] [5]
+process the point 3-->[3] [1] [6] [7]
+process the point 4-->[4] [2] [8]
+process the point 5-->[5] [2] [8]
+process the point 6-->[6] [3] [8]
+process the point 7-->[7] [3] [8]
+process the point 8-->[8] [4] [5] [6] [7]
+圖形的相鄰串列內容:
 1=> [2][3]
 2=> [1][4][5]
 3=> [1][6][7]
@@ -144,14 +144,14 @@ process the point 8-->[8] [4] [5] [6] [7]
 6=> [3][8]
 7=> [3][8]
 8=> [4][5][6][7]
-dfs : 
+dfs :
 [1][2][4][8][5][6][3][7]
-process the point 1-->[1] [2] [5] 
-process the point 2-->[2] [1] [4] [3] 
-process the point 3-->[3] [2] [4] [5] 
-process the point 4-->[4] [2] [3] [5] 
-process the point 5-->[5] [1] [3] [4] 
-圖形的相鄰串列內容: 
+process the point 1-->[1] [2] [5]
+process the point 2-->[2] [1] [4] [3]
+process the point 3-->[3] [2] [4] [5]
+process the point 4-->[4] [2] [3] [5]
+process the point 5-->[5] [1] [3] [4]
+圖形的相鄰串列內容:
 1=> [2][5]
 2=> [1][4][3]
 3=> [2][4][5]

@@ -9,24 +9,24 @@ int main()
         for (j = 0; j < 6; j++)
             for (k = 0; k < 6; k++)
             {
-                tmpi=data[i][0];
-                tmpj=data[i][1];
+                tmpi = data[i][0];
+                tmpj = data[i][1];
                 arr[tmpi][tmpj] = 1;
             }
     printf("無向圖: \n");
     for (i = 1; i < 6; i++)
     {
-         for (j = 1; j < 6; j++)
-                printf("[%d]", arr[i][j]); printf("\n");
+        for (j = 1; j < 6; j++)
+            printf("[%d]", arr[i][j]);
+        printf("\n");
     }
-   
-   
+
     system("pause");
     return 0;
 }
 /*
 
-無向圖: 
+無向圖:
 [0][1][0][0][1]
 [1][0][1][1][0]
 [0][1][0][1][0]
